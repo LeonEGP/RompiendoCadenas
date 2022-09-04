@@ -1,6 +1,8 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -31,13 +33,26 @@ int multiploCercano(int numero, int base) {
     return numero;
 }
 
-void hashString(string archivo, int n) {
+void hashString(string nombreArchivo, int n) {
 
     int longitudString;
     int columnas;
+    vector <vector <char>> tabla;
+    string linea;
 
     longitudString = n / 4;
     columnas = n;
+
+    for (int i = 0; i < columnas; i++) {
+        vector <char> columna;
+        tabla.push_back(columna);
+    }
+
+    ifstream archivo(nombreArchivo.c_str());
+
+    while (getline(archivo, linea)) {
+
+    }
 
 }
 
