@@ -33,6 +33,12 @@ int multiploCercano(int numero, int base) {
 
 void hashString(string archivo, int n) {
 
+    int longitudString;
+    int columnas;
+
+    longitudString = n / 4;
+    columnas = n;
+
 }
 
 int main() {
