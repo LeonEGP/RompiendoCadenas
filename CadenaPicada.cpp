@@ -150,8 +150,10 @@ void hashString(string nombreArchivo, int n) {
         hashing += hexadecimal[i];
     }
 
-    hashing = hashing.substr(hashing.size() - longitudString);
+    //hashing = hashing.substr(hashing.size() - longitudString);
+    hashing = hashing.substr(0,longitudString);
 
+    espacio();
     cout << "RESULTADO HASHING: " << endl;
     cout << hashing << endl;
 
