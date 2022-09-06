@@ -56,28 +56,28 @@ void hashString(string nombreArchivo, int n) {
     vector <long long int> resultado;
     vector <string> hexadecimal;
     string hashing;
-    char caracter;
+    char auxiliar;
 
     longitudString = n / 4;
     columnas = n;
-    
-    if(n >= 10 && n < 19) {
-        caracter = '1';
+
+    if (n >= 10 && n < 19) {
+        auxiliar = '1';
     }
     else if (n >= 20 && n < 29) {
-        caracter = '2';
+        auxiliar = '2';
     }
     else if (n >= 30 && n < 39) {
-        caracter = '3';
+        auxiliar = '3';
     }
     else if (n >= 40 && n < 49) {
-        caracter = '4';
+        auxiliar = '4';
     }
     else if (n >= 50 && n < 59) {
-         caracter = '5';
+        auxiliar = '5';
     }
     else if (n >= 60 && n < 69) {
-         caracter = '6';
+        auxiliar = '6';
     }
 
     for (int i = 0; i < columnas; i++) {
@@ -108,10 +108,13 @@ void hashString(string nombreArchivo, int n) {
         }
 
         if (iterador != 0) {
+
             for (int j = iterador; j < columnas; j++) {
-                tabla[j].push_back(caracter);
+                tabla[j].push_back(auxiliar);
             }
+
         }
+
     }
 
     for (int i = 0; i < columnas; i++) {
@@ -147,7 +150,7 @@ void hashString(string nombreArchivo, int n) {
     }
 
     //hashing = hashing.substr(hashing.size() - longitudString);
-    hashing = hashing.substr(0,longitudString);
+    hashing = hashing.substr(0, longitudString);
 
     espacio();
     cout << "RESULTADO HASHING: " << endl;
