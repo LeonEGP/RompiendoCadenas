@@ -173,7 +173,7 @@ void hashString(string nombreArchivo, int n) { //Complejidad Computacional: O(n)
 }
 
 //Función main que ejecuta el programa, no recibe parámetros, retorna un entero [return 0].
-int main() {
+int main() { //Complejidad Computacional: O(1).
 
     // ---------- DECLARACIÓN DE VARIABLES ---------- //
     string archivo;
