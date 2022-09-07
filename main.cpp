@@ -50,7 +50,7 @@ string aMayuscula(string cadena) { //Complejidad Computacional: O(n), siendo n l
 }
 
 //Función que muestra el hasheo de un archivo de texto, recibe como parámetro un strig que es el nombre del archivo.
-void hashString(string nombreArchivo, int n) { //Complejidad Computacional: O(n), siendo n la cantidad de caracteres del archivo de texto.
+string hashString(string nombreArchivo, int n) { //Complejidad Computacional: O(n), siendo n la cantidad de caracteres del archivo de texto.
 
     //Declaración/Inicialización de variables.
     int longitudString;
@@ -166,10 +166,9 @@ void hashString(string nombreArchivo, int n) { //Complejidad Computacional: O(n)
     // Esto es si se quisieran los últimos n caracteres -> hashing = hashing.substr(hashing.size() - longitudString); //Pérdida aún mayor de información. 
     hashing = hashing.substr(0, longitudString);
 
-    //Impresión en consola del hashing. 
-    espacio();
-    cout << "RESULTADO HASHING: " << endl;
-    cout << hashing << endl;
+    //Retorna el hash.
+    return hashing;
+    
 }
 
 //Función main que ejecuta el programa, no recibe parámetros, retorna un entero [return 0].
@@ -178,6 +177,7 @@ int main() { //Complejidad Computacional: O(1).
     // ---------- DECLARACIÓN DE VARIABLES ---------- //
     string archivo;
     int n;
+    string hashing;
 
     // ---------- INICIA PROGRAMA ---------- //
     cout << "INGRESE EL NOMBRE DEL ARCHIVO: " << endl;
@@ -202,7 +202,10 @@ int main() { //Complejidad Computacional: O(1).
     }
 
     // ---------- HASHEO DEL ARCHIVO ---------- //
-    hashString(archivo,n);
+    hashing = hashString(archivo,n);
+    espacio();
+    cout << "RESULTADO HASHING: " << endl;
+    cout << hashing << endl;
 
     // ---------- TERMINA PROGRAMA ---------- //
     return 0;
