@@ -1,0 +1,2 @@
+prueba0.txt
+64
