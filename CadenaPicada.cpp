@@ -49,7 +49,7 @@ string aMayuscula(string cadena) { //Complejidad Computacional: O(n), siendo n l
     return cadena;
 }
 
-//Función que muestra el hasheo de un archivo de texto, recibe como parámetro un strig que es el nombre del archivo.
+//Función que da el hasheo de un archivo de texto, recibe como parámetro un strig que es el nombre del archivo, un entero n multiplo de 4 entre 16 y 64, retorna un string con el hasheo. 
 string hashString(string nombreArchivo, int n) { //Complejidad Computacional: O(n), siendo n la cantidad de caracteres del archivo de texto.
 
     //Declaración/Inicialización de variables.
